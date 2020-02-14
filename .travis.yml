@@ -1,3 +1,2 @@
 language: node_js
-env:
-  - SNYK_TOKEN=2451a095-b845-4b4d-b669-4bce9df9ad52 
+
