@@ -4,7 +4,7 @@
   "description": "API for product web search",
   "main": "app.js",
   "scripts": {
-    "test": "node ./workflow/runTests.js",
+    "test": "mocha",
     "start": "nodemon server.js"
   },
   "repository": {
@@ -16,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/julianbr96/ganymede/issues"
   },
-  "homepage": "https://github.com/julianbr96/ganymede#readme"
+  "homepage": "https://github.com/julianbr96/ganymede#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1"
+  },
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^8.0.8",
+    "request": "^2.88.2"
+  }
 }
