@@ -4,8 +4,8 @@
   "description": "API for product web search",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "node ./workflow/runTests.js",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
