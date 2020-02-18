@@ -10,4 +10,4 @@ app.use(logger());
 
 app.use(mainRouter.routes()).use(mainRouter.allowedMethods());
 
-module.exports = app;
+module.exports = app.listen(process.env.PORT || '3000');
