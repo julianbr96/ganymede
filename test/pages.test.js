@@ -2,13 +2,13 @@ const chai = require('chai');
 const should = chai.should();
 const expect = chai.expect;
 const chaiHttp = require('chai-http');
-const app = require('../src/app');
+const server = require('../server');
 
 chai.use(chaiHttp);
 describe('GET /', () => {
   it('should have status 200', done => {
     chai
-      .request(app)
+      .request(server)
       .get('/')
       .end((err, res) => {
         expect(err).to.be.null;
@@ -18,7 +18,7 @@ describe('GET /', () => {
   });
   it('should response with serverStatus = "Ok"', done => {
     chai
-      .request(app)
+      .request(server)
       .get('/')
       .end((err, res) => {
         expect(err).to.be.null;
