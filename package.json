@@ -4,7 +4,7 @@
   "description": "API for product web search",
   "main": "app.js",
   "scripts": {
-    "test": "mocha test/*.js",
+    "test": "mocha",
     "start": "node server.js",
     "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
