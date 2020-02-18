@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha",
     "start": "node server.js",
-    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "cover-local": "jest --coverage"
   },
   "repository": {
     "type": "git",
