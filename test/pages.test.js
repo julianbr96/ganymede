@@ -12,7 +12,7 @@ describe('GET /', () => {
       .get('/')
       .end((err, res) => {
         expect(err).to.be.null;
-        res.should.have.status(200);
+        expect(res.status).to.equal(200);
         done();
       });
   });
