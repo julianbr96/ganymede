@@ -4,10 +4,10 @@
   "description": "API for product web search",
   "main": "app.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --exit",
     "start": "node server.js",
-    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "cover-local": "jest --coverage"
+    "coverage": "jest --coverage --forceExit && cat ./coverage/lcov.info | coveralls",
+    "cover-local": "jest --coverage --detectOpenHandles --forceExit"
   },
   "repository": {
     "type": "git",
@@ -33,5 +33,8 @@
     "koa-logger": "^3.2.1",
     "mongoose": "^5.9.1",
     "request": "^2.88.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
