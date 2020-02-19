@@ -7,4 +7,4 @@ const searchDataSchema = mongoose.Schema({
   callbackUrl: { type: String, required: true }
 });
 
-module.exports = mongoose.model('SearchData', searchDataSchema);
+module.exports = searchDataSchema;

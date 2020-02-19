@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const searchData = require('../../resources/search-data.json');
-const searchDataKeys = Object.keys(searchData).sort();
+
+const searchDataSchema = require('./searchDataSchema');
 const statusNames = {
   received: 'received',
   processing: 'processing',
@@ -12,15 +12,8 @@ const searchStatus = Object.values(statusNames);
 const searchOrderSchema = mongoose.Schema(
   {
     searchData: {
-      type: Object,
-      required: true,
-      validate: {
-        validator: function(v) {
-          const vKeys = Object.keys(v).sort();
-          return JSON.stringify(vKeys) === JSON.stringify(searchDataKeys);
-        },
-        message: props => `${props.value} is not a valid search data`
-      }
+      type: searchDataSchema,
+      required: true
     },
     orderStatus: {
       type: String,

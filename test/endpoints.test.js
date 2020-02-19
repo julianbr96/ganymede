@@ -3,7 +3,7 @@ const should = chai.should();
 const expect = chai.expect;
 const chaiHttp = require('chai-http');
 const server = require('../server');
-const searchOrder = require('../resources/search-data.json');
+const searchOrder = require('./resources/validSearchOrder.json');
 const invalidSearchOrder = require('./resources/invalidSearchOrder.json');
 
 chai.use(chaiHttp);
@@ -30,7 +30,7 @@ describe('GET /', () => {
   });
 });
 describe('POST /api/product/search', () => {
-  it('should save search order correctly and have status 201', done => {
+  it('should save search-order correctly and have status 201', done => {
     chai
       .request(server)
       .post('/api/product/search')
