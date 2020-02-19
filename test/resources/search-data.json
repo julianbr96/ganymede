@@ -1,0 +1,9 @@
+{
+    "query": "Silla",
+    "provider": "easy",
+    "options": {
+        "user": "test@test.com.ar",
+        "password": "test1234"
+    },
+    "callbackUrl": "http://my-endpoint.com/results"
+}
