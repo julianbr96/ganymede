@@ -1,6 +1,6 @@
 {
   "name": "ganymede",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "API for product web search",
   "main": "app.js",
   "scripts": {
