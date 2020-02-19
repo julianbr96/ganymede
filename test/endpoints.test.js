@@ -7,7 +7,7 @@ const searchOrder = require('./resources/search-data.json');
 
 chai.use(chaiHttp);
 describe('GET /', () => {
-  it('should have status 200', done => {
+  it('should have status 200', async done => {
     chai
       .request(server)
       .get('/')
@@ -17,7 +17,7 @@ describe('GET /', () => {
         done();
       });
   });
-  it('should response with serverStatus = "Ok"', done => {
+  it('should response with serverStatus = "Ok"', async done => {
     chai
       .request(server)
       .get('/')
@@ -29,7 +29,7 @@ describe('GET /', () => {
   });
 });
 describe('POST /api/product/search', () => {
-  it('should have status 201', done => {
+  it('should save search order correctly and have status 201', async done => {
     chai
       .request(server)
       .post('/api/product/search')
@@ -37,16 +37,6 @@ describe('POST /api/product/search', () => {
       .end((err, res) => {
         expect(err).to.be.null;
         expect(res.status).to.equal(201);
-        done();
-      });
-  });
-  it('should save search order correctly', done => {
-    chai
-      .request(server)
-      .post('/api/product/search')
-      .send(searchOrder)
-      .end((err, res) => {
-        expect(err).to.be.null;
         expect(res.body.status).to.be.equal('Successful');
         done();
       });
